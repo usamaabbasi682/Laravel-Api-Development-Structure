@@ -2,9 +2,11 @@
 
 namespace App\Enums;
 
-enum RoleTypeEnum : string
+enum RoleTypeEnum: string
 {
     case ADMIN = 'admin';
-    case USER = 'user';
-    case STAFF = 'staff';
+    case SELLER = 'seller';
+    case VENDOR = 'vendor';
+    case WRITER = 'writer';
+    case OPERATOR = 'operator';
 }

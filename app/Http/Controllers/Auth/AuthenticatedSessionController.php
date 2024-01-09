@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
 
         } catch (ValidationException $e) {
 
-            return UserResource::make(NULL)
+            return UserResource::make(null)
                 ->additional([
                     'success' => false,
                     'message' => 'Email or Password is incorrect',
@@ -39,7 +39,7 @@ class AuthenticatedSessionController extends Controller
 
         } catch (\Exception $e) {
 
-            return UserResource::make(NULL)
+            return UserResource::make(null)
                 ->additional([
                     'success' => false,
                     'message' => 'Something went wrong. Please try again later.',
@@ -55,7 +55,7 @@ class AuthenticatedSessionController extends Controller
     {
         auth()->user()->currentAccessToken()->delete();
 
-        return UserResource::make(NULL)
+        return UserResource::make(null)
             ->additional([
                 'success' => true,
                 'message' => 'Logout successfully',

@@ -16,7 +16,10 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $role = Role::create(['name' => RoleTypeEnum::ADMIN->value]);
-        $role = Role::create(['name' => RoleTypeEnum::CLIENT->value]);
+        $role = Role::create(['name' => RoleTypeEnum::SELLER->value]);
+        $role = Role::create(['name' => RoleTypeEnum::VENDOR->value]);
+        $role = Role::create(['name' => RoleTypeEnum::WRITER->value]);
+        $role = Role::create(['name' => RoleTypeEnum::OPERATOR->value]);
 
         $user = User::create([
             'name' => 'admin',
